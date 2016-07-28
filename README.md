@@ -47,3 +47,13 @@ Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見�
 }
 ```
 
+Flowchain 大幅簡化了典型的 Flow-Based Programming 模式，這讓 Flowchain 更適用於 IoT 場景，而且執行 Flowchain 應用程式的 Runtime 也只有大約 300+ 行左右的程式碼實作。
+
+Flowchain 架構設計包含幾個特色：
+
+* 單一資料方向流（single data direction）：與 Flux 相同的是，Flowchain 的設計是單一資料方向流，它不採用雙向資料流（two-way）的設計
+* Component-based 設計：組件（component）透過 inPort 與 outPort 來輸入與輸出資料，組件可以直接重用或程式碼重用（Code Reuse），而且組件之間沒有耦合性
+* Decoupled Architecture：因為 Flowchain 的 component 間是完全沒有耦合的，所以 Flowchain 的應用程式，是高度 decoupled 架構，這點與 Flux 相同
+
+
+
