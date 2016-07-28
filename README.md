@@ -1,6 +1,6 @@
 Flowchain 物聯網中文教材
 
-# Chapter1. Flowchain 簡介
+# 1. Flowchain 簡介
 
 如果要「簡單介紹」這是什麼技術，還真的不簡單。所以，不如根據這份中文教材，體驗 Flowchain 在物聯網開發上的創新。
 
@@ -16,6 +16,34 @@ wotcity.io 被封裝為 [devify-server](https://github.com/DevifyPlatform/devify
 
 架構上，devify-server 封裝了 wotcity.io，並且負責 Event Handling、Broker Server 與 Serverless 的角色。不過，你也不需要學習 devify-server 的程式設計。devify-server 再被封裝了，成為 *Flowchain* 技術。
 
-Flowchain 帶來一些好消息，其中之一就是帶來 Flow-Based Programming 的物聯網開發模式。
+Flowchain 帶來一些好消息，其中之一就是採用 Flow-Based Programming 的物聯網開發模式。
 
+## Flowchain 設計模式
+
+Flowchain 的名稱來自 _Flow-Based Programming_，故名思義，這是一個 Flow-Based Programming (FBP) 的技術。Flow-Based Programming 並不是新鮮事，非常知名的 [Flux](https://facebook.github.io/flux/docs/overview.html) 就是一個 Flow-Based Programming 的模式。
+
+實際上，Flowchain 的設計能讓它與 Flux 模式非常良好地結合，在這份教材的最後，你將能學會 Flowchain 如何與 Flux 結合，應用在物聯網開發上。
+
+Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見這個例子：
+
+```
+{
+	"author": "jollen",
+	"type": "coapToWebsocketBroker",
+	"connections": [
+		{
+			"upproc": "io.devify.console",
+		 	"upport": "out",
+		 	"downproc": "io.devify.fs",
+		 	"downport": "in"
+		},
+		{
+			"upproc": "io.devify.fs",
+		 	"upport": "out",
+		 	"downproc": "io.devify.sms",
+		 	"downport": "in"
+		}
+	]
+}
+```
 
