@@ -53,7 +53,7 @@ Flowchain 架構設計包含幾個特色：
 
 將上述例子，以視覺化圖形（Graph）的方式表示。
 
-![Flowchain Graph](https://cloud.githubusercontent.com/assets/1126021/17215542/cc4b94ca-550f-11e6-972b-a6953d6e92a8.png)
+![Flowchain Graph](https://cloud.githubusercontent.com/assets/1126021/17215664/409fd6ec-5510-11e6-80fb-371b6c3a724e.png)
 
 這裡有二個 Component：
 
