@@ -55,5 +55,7 @@ Flowchain 架構設計包含幾個特色：
 * Component-based 設計：組件（component）透過 inPort 與 outPort 來輸入與輸出資料，組件可以直接重用或程式碼重用（Code Reuse），而且組件之間沒有耦合性
 * Decoupled Architecture：因為 Flowchain 的 component 間是完全沒有耦合的，所以 Flowchain 的應用程式，是高度 decoupled 架構，這點與 Flux 相同
 
+## Flowchain 程式設計
 
+將上述例子，以視覺化圖形（Graph）的方式表示。
 
