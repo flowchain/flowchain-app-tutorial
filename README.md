@@ -36,12 +36,6 @@ Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見�
 		 	"upport": "out",
 		 	"downproc": "io.devify.fs",
 		 	"downport": "in"
-		},
-		{
-			"upproc": "io.devify.fs",
-		 	"upport": "out",
-		 	"downproc": "io.devify.sms",
-		 	"downport": "in"
 		}
 	]
 }
@@ -60,3 +54,8 @@ Flowchain 架構設計包含幾個特色：
 將上述例子，以視覺化圖形（Graph）的方式表示。
 
 ![Flowchain Graph](https://cloud.githubusercontent.com/assets/1126021/17215542/cc4b94ca-550f-11e6-972b-a6953d6e92a8.png)
+
+這裡有二個 Component：
+
+* *io.flowchain.console*
+* *io.flowchain.fs*
