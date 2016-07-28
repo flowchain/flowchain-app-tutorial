@@ -41,6 +41,8 @@ Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見�
 }
 ```
 
+這就是一個 Flowchain 的應用程式。
+
 Flowchain 大幅簡化了典型的 Flow-Based Programming 模式，這讓 Flowchain 更適用於 IoT 場景，而且執行 Flowchain 應用程式的 Runtime 也只有大約 300+ 行左右的程式碼實作。
 
 Flowchain 架構設計包含幾個特色：
@@ -57,5 +59,29 @@ Flowchain 架構設計包含幾個特色：
 
 這裡有二個 Component：
 
-* *io.flowchain.console*
-* *io.flowchain.fs*
+* *io.flowchain.console*：這個元件會把輸入的資料列印在 console
+* *io.flowchain.fs*：這個元件會把輸入的資料儲存為文字檔
+
+你只需要實作以上這二個元件，然後把它們「連接」起來，就能達到：將資料印在 console 後，再儲存為文字檔。上述的 Flowchain 應用程式，就是在描述這個「連接關係」。
+
+以這個例為例，資料的「流向」是從 *io.flowchain.console* 到 *io.flowchain.fs*。如果你想讓資料的流向是：從 *io.flowchain.fs* 到 *io.flowchain.console*，那要如何撰寫 Flowchain app 呢？答案如下：
+
+```
+{
+	"author": "jollen",
+	"type": "coapToWebsocketBroker",
+	"connections": [
+		{
+			"upproc": "io.devify.fs",
+		 	"upport": "out",
+		 	"downproc": "io.devify.console",
+		 	"downport": "in"
+		}
+	]
+}
+```
+
+是不是很簡單呢。元件可以重用與共享，意思是，*io.flowchain.console* 與 *io.flowchain.fs* 二個元件，你都能直接拿去使用。這是 Flowchain pattern 的設計思想。
+
+# 2. Flowchain 快速入門
+
