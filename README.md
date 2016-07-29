@@ -18,7 +18,7 @@ wotcity.io 被封裝為 [devify-server](https://github.com/DevifyPlatform/devify
 
 Flowchain 帶來一些好消息，其中之一就是採用 Flow-Based Programming 的物聯網開發模式。
 
-## Flowchain 設計模式
+## Flowchain 設計思路
 
 Flowchain 的名稱來自 _Flow-Based Programming_，故名思義，這是一個 Flow-Based Programming (FBP) 的技術。Flow-Based Programming 並不是新鮮事，非常知名的 [Flux](https://facebook.github.io/flux/docs/overview.html) 就是一個 Flow-Based Programming 的模式。
 
@@ -83,5 +83,7 @@ Flowchain 架構設計包含幾個特色：
 
 是不是很簡單呢。元件可以重用與共享，意思是，*io.flowchain.console* 與 *io.flowchain.fs* 二個元件，你都能直接拿去使用。這是 Flowchain pattern 的設計思想。
 
-# 2. Flowchain 快速入門
+# 2. Flowchain Pattern
+
+# 3. Flowchain 快速入門
 
