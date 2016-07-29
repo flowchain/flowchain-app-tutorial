@@ -103,5 +103,55 @@ Flowchain 的目標，並不是教你理解並撰寫 Flowchain，而是將這個
 
 # 3. Flowchain 快速入門
 
+下載 flowchain 後，在 *graphs/* 目錄下可以找到幾個 _Graph_ 的範例，其中一個 Graph 稱為 *console.json*，請直接執行這個 Graph：
 
+```
+$ git clone https://github.com/flowchain/flowchain.git
+$ npm install
+$ ./bin/init.js start graphs/console.json 
+[devify] Starting coapBroker server…
+WoT/CoAP server is listening at coap://localhost:8000
+```
 
+現在，你已經啟動第一個 Flowchain Application 了。Flowchain Application 的檔案名稱是 _*.json_。Flowchain 應用程式是以 JSON 格式撰寫，這份 JSON 文件就是在描述「Component 連接」關係（請見上文說明），也就是說，這份 JSON 文件就是在描述 Graph（圖形）。
+
+是的，用 JSON 來描述 Graph，就是 Flowchain 應用程式的 Programming Model。
+
+現在，你只需要將 Sensor Data 傳送到 *coap://localhost:8000* 伺服器即可。從這個示範來看，Flowchain Application 是以 Server 形式存在，並且是 REST 架構。
+
+更進一步說，所以你只要透過以下的 URI 來傳送資料給 Flowchain Application 即可：
+
+```
+coap://192.168.0.100:8000/object/12345678/send
+```
+
+你可以使用這個 Test Case 來測試：
+
+```
+var coap = require(‘coap’);
+
+var sendNumber = function() {
+    // 1 to 100
+    var number = Math.round(Math.random() * 100 + 1);
+    var obj = {temperature: number, temp: number};
+    var data = JSON.stringify(obj);
+
+    console.log(‘Pushing: ‘ + data);
+
+    var clientWriable = coap.request(‘coap://localhost:8000/object/55548dd35200c3917f000159/send');
+    clientWriable.end(new Buffer(data));
+
+    setTimeout(sendNumber, 1000);
+};
+
+sendNumber();
+```
+
+請將這個測試式儲存為 *test.js*，然後安裝 coap 模組後直接執行即可：
+
+```
+$ npm i coap
+$ node test.js
+```
+
+# 4. Flowchain Component
