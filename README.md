@@ -28,14 +28,14 @@ Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見�
 
 ```
 {
-	"author": "jollen",
-	"type": "coapToWebsocketBroker",
-	"connections": [
+	“author”: “jollen”,
+	“type”: “coapToWebsocketBroker”,
+	“connections”: [
 		{
-			"upproc": "io.devify.console",
-		 	"upport": "out",
-		 	"downproc": "io.devify.fs",
-		 	"downport": "in"
+			“upproc”: “io.devify.console”,
+		 	“upport”: “out”,
+		 	“downproc”: “io.devify.fs”,
+		 	“downport”: “in”
 		}
 	]
 }
@@ -68,14 +68,14 @@ Flowchain 架構設計包含幾個特色：
 
 ```
 {
-	"author": "jollen",
-	"type": "coapToWebsocketBroker",
-	"connections": [
+	“author”: “jollen”,
+	“type”: “coapToWebsocketBroker”,
+	“connections”: [
 		{
-			"upproc": "io.devify.fs",
-		 	"upport": "out",
-		 	"downproc": "io.devify.console",
-		 	"downport": "in"
+			“upproc”: “io.devify.fs”,
+		 	“upport”: “out”,
+		 	“downproc”: “io.devify.console”,
+		 	“downport”: “in”
 		}
 	]
 }
@@ -85,5 +85,23 @@ Flowchain 架構設計包含幾個特色：
 
 # 2. Flowchain Pattern
 
+如果你已經熟悉 Flux 模式，要了解 Flowchain 的設計思路，對你來說已經是輕而易舉的事情了。
+
+![Flowchain](https://cloud.githubusercontent.com/assets/1126021/17242135/190517ee-55a8-11e6-8207-a936a29fb8f6.png)
+
+Flowchain 的目標，並不是教你理解並撰寫 Flowchain，而是將這個模式「封裝」為 Software Framework 後，讓你很容易撰寫 Flowchain 應用程式。使用 Flowchain，你唯一要學習的是如何撰寫 *Flowchain Applications*.
+
+上圖是「基本款」的 Flowchain Pattern。眼尖的你應該已經發現，這就是 Flux Pattern。是的，基本的 Flowchain Pattern 與 Flux Pattern 是相同的。二者之間有諸多相通的設計，例如：single dispatcher、single data flow 等。
+
+在 Flowchain 模式裡：
+
+* *Actions* 主要負責將數據傳送給 Dispatcher，actions（例如：數據）的來源是 Websocket server 或是 CoAP server
+* *Dispatcher* 主要負責將數據分發給 Stores
+* *Stores* 就是 Flowchain 的 Component。另外，Flowchain 的底層，有一個稱為 Devify 的 Store，它負責 emit 事件。但是你不需要了解 Devify 這個部份，只要學習如何撰寫 Component 與 Graph 就可以了
+
+另外，Dispatcher 還有一個特別的角色，它也做為「Broker」，這部份你也不必了解；不過，在本教學的最後，會做簡單說明。
+
 # 3. Flowchain 快速入門
+
+
 
