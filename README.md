@@ -95,11 +95,11 @@ Flowchain 的目標，並不是教你理解並撰寫 Flowchain，而是將這個
 
 在 Flowchain 模式裡：
 
-* *Actions* 主要負責將數據傳送給 Dispatcher，actions（例如：數據）的來源是 Websocket server 或是 CoAP server
+* *Actions* 主要負責將數據傳送給 Dispatcher，actions（例如：數據）的來源是 Websocket Server 或是 CoAP Server
 * *Dispatcher* 主要負責將數據分發給 Stores
 * *Stores* 就是 Flowchain 的 Component。另外，Flowchain 的底層，有一個稱為 Devify 的 Store，它負責 emit 事件。但是你不需要了解 Devify 這個部份，只要學習如何撰寫 Component 與 Graph 就可以了
 
-另外，Dispatcher 還有一個特別的角色，它也做為「Broker」，這部份你也不必了解；不過，在本教學的最後，會做簡單說明。
+另外，Dispatcher 還有一個特別的角色，它也做為「Broker」，這部份你也不必了解；不過，在本教學的最後，會做簡單說明。另外附帶一提，Actions 也扮演 URL Routing 的角色。
 
 # 3. Flowchain 快速入門
 
@@ -122,7 +122,7 @@ WoT/CoAP server is listening at coap://localhost:8000
 更進一步說，所以你只要透過以下的 URI 來傳送資料給 Flowchain Application 即可：
 
 ```
-coap://192.168.0.100:8000/object/12345678/send
+coap://localhost:8000/object/12345678/send
 ```
 
 你可以使用這個 Test Case 來測試：
