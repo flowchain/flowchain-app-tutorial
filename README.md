@@ -99,7 +99,9 @@ Flowchain 的目標，並不是教你理解並撰寫 Flowchain，而是將這個
 * *Dispatcher* 主要負責將數據分發給 Stores
 * *Stores* 就是 Flowchain 的 Component。另外，Flowchain 的底層，有一個稱為 Devify 的 Store，它負責 emit 事件。但是你不需要了解 Devify 這個部份，只要學習如何撰寫 Component 與 Graph 就可以了
 
-另外，Dispatcher 還有一個特別的角色，它也做為「Broker」，這部份你也不必了解；不過，在本教學的最後，會做簡單說明。另外附帶一提，Actions 也扮演 URL Routing 的角色。
+Dispatcher 還有一個特別的角色，它也做為「Broker」，這部份現階段你也不必了解。這有什麼用途呢？一個例子是：讓你完全不用寫程式，就可連到 Dashboard（Web Frontend）。
+
+另外，附帶一提：Actions 也扮演 URL Routing 的角色。
 
 # 3. Flowchain 快速入門
 
