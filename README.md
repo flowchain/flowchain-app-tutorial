@@ -1,4 +1,4 @@
-Flowchain 物聯網中文教材
+Flowchain 入門極簡教材
 
 # 1. Flowchain 簡介
 
