@@ -155,3 +155,68 @@ $ node test.js
 ```
 
 # 4. Flowchain Component
+
+上述 Flowchain App 範例，包含 2 個 Flowchain Component，其中一個稱為 *io.devify.console*。練習撰寫 Flowchain Component 是學習 Flowchain 的重要課程。底下是 *io.devify.console* 的實作解說。
+
+```
+//
+// 1. 引用 wotcity.io 模組
+//     * Flowchain Component 與 Flowchain Runtime 都打包在 wotcity.io 裡面
+var wotcity = require('wotcity.io');
+
+//
+// 2. 匯出 getComponent() 函數
+//     * 每個 Flowchain Component 都要有這個 public method 的實作
+//
+exports.getComponent = function() {
+//
+// 3. 取得 wotcity.Component 的實例化
+//     * 意思等同於建立新的 Flowchain 元件
+//
+  var component = new wotcity.Component;
+
+//
+// 4. 給你的元件一個名稱
+//     * 命令規範與 Java package 相同
+//
+  component.name = "io.devify.console";
+  
+//
+// 5. 元件的用途說明
+//
+  component.description = "This component prints the received data on the console.";
+
+//
+// 6. Flowchain 元件的 inPort。元件的 inPort 如果有資料流入，callback function 就會被呼叫。
+//
+  component.inPorts.add('in', function(event, payload) {
+    switch (event) {
+//
+// 7. 你只需要實作 'data' 事件就可以了
+//    
+      case 'data':
+//
+// 8. 由 payload 取得流入的資料。資料格式都是用 JSON。
+//   
+        console.log(JSON.stringify(payload));
+//
+// 9. 成功請回傳 '0'
+//          
+        return 0;
+      case 'disconnect':
+        // Input port disconnects
+        return 0;
+    }
+  });
+
+//
+// 10. 宣告元件的 outPort。這裡不需要修改。
+//  
+  component.outPorts.add('out');
+
+//
+// 收工。
+//  
+  return component;
+};
+```
