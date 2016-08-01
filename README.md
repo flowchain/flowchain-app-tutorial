@@ -243,4 +243,4 @@ Flowchain 的設計思想，深受 Flux 模式與 Flow-Based Programming 觀念�
 * 實作前端或移動應用，使用 ```Flowchain + React```
 * 實作 IoT 雲平台，使用 ```Flowchain + Microservice```
 
-敬請期待 Flowchain 進階教材。
+敬請期待 Flowchain 進階教材。最後，還有一個重要的事情：Flowchain 從上到下都是 JavaScript 的實作 :-)
