@@ -235,3 +235,12 @@ exports.getComponent = function() {
   return component;
 };
 ```
+
+# 結語
+
+Flowchain 的設計思想，深受 Flux 模式與 Flow-Based Programming 觀念的影響，整體架構也完全採取 Decoupled 方式設計。這讓 *Flowchain App* 能與這些技術整合：
+
+* 實作前端或移動應用，使用 ```Flowchain + React```
+* 實作 IoT 雲平台，使用 ```Flowchain + Microservice```
+
+敬請期待 Flowchain 進階教材。
