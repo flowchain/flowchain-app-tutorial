@@ -22,7 +22,7 @@ Flowchain 帶來一些好消息，其中之一就是採用 Flow-Based Programmin
 
 Flowchain 的名稱來自 _Flow-Based Programming_，故名思義，這是一個 Flow-Based Programming (FBP) 的技術。Flow-Based Programming 並不是新鮮事，非常知名的 [Flux](https://facebook.github.io/flux/docs/overview.html) 就是一個 Flow-Based Programming 的模式。
 
-實際上，Flowchain 的設計能讓它與 Flux 模式非常良好地結合，在這份教材的最後，你將能學會 Flowchain 如何與 Flux 結合，應用在物聯網開發上。
+實際上，Flowchain 的設計模式與 Flux 模式是相同的。這讓 Flowchain 與 React 也能良好地結合。在未來的進階教材中，你將能學會 Flowchain 如何與 React 結合，應用在物聯網的 Fullstack 開發中。
 
 Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見這個例子：
 
