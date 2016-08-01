@@ -169,7 +169,7 @@ Flowchain app 執行後，成為一個 *Server*，IoT 裝置可以使用 URI 將
 
 整個 Graph 的資料從何而來呢？Flowchain 的第 1 個元件稱為 *Root Component*，資料會從 Root Component 流入。上述範例的 *io.devify.fs* 就是 Root Component。意思是說：*io.devify.fs* 的 inPort 是資料流入的起點。
 
-根據上述範例的 connections 設計，這筆資料會從 *io.devify.fs* 的 outPort 流出，並流入 **io.devify.console* 的 *inPort*。
+根據上述範例的 connections 設計，這筆資料會從 *io.devify.fs* 的 outPort 流出，並流入 *io.devify.console* 的 *inPort*。
 
 # 4. Flowchain Component
 
