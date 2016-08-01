@@ -69,7 +69,7 @@ Flowchain 架構設計包含幾個特色：
 ```
 {
 	“author”: “jollen”,
-	“type”: “coapToWebsocketBroker”,
+	“type”: “coapBroker”,
 	“connections”: [
 		{
 			“upproc”: “io.devify.fs”,
@@ -153,6 +153,21 @@ sendNumber();
 $ npm i coap
 $ node test.js
 ```
+
+## IoT Protocol
+
+Flowchain app 執行後，成為一個 *Server*，IoT 裝置可以使用 URI 將資料傳送給 Flowchain app。
+
+問題來了，那 Flowchain app 啟動後，要怎麼指定通訊協定呢？非常簡單，只要修改 ```type``` 欄位就可以了：
+
+* ```coapBroker```：使用 CoAP 協定
+* ```websocketBroker```：使用 WebSocket 協定
+
+## Data Flow 的開始
+
+整個 Graph 的資料從何而來呢？Flowchain 會把的第 1 個元件，也就是上述範例的 *io.devify.fs*。意思是說：*io.devify.fs* 的 inPort 會拿到最開始的資料。
+
+根據上述範例的 connections 設計，這筆資料會從 *io.devify.fs* 的 outPort 流出，並流入 **io.devify.console* 的 *inPort*。
 
 # 4. Flowchain Component
 
