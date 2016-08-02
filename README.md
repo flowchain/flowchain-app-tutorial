@@ -242,7 +242,7 @@ exports.getComponent = function() {
 
 如果你開發了一個 Flowchain Component，可以利用 npm 將這個元件出版。以下是 Flowchain Component 的交付流程。
 
-1. 參考 [io.flowchain.console](https://github.com/flowchain/io.flowchain.console) 將你的元件打包
+1. 參考 [io.flowchain.console](https://github.com/flowchain/io.flowchain.console) 的專案結構，將你的元件打成標準的 npm 包
 2. 使用 `npm publish` 出版到 npm 社群
 3. 在 [github.com/flowchain/flowchain.github.io](https://github.com/flowchain/flowchain.github.io/issues) 開 Issue，提交你的 github 網址
 4. 你的元件會被收錄到 [flowchain.io](http://flowchain.io) 上
