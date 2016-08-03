@@ -28,16 +28,16 @@ Flowchain 採用 Flow-Based Programming 的觀念，這一點都不難，請見�
 
 ```
 {
-	“author”: “jollen”,
-	“type”: “coapToWebsocketBroker”,
-	“connections”: [
-		{
-			“upproc”: “io.devify.console”,
-		 	“upport”: “out”,
-		 	“downproc”: “io.devify.fs”,
-		 	“downport”: “in”
-		}
-	]
+    "author": "jollen",
+    "type": "coapBroker",
+    "connections": [
+        {
+            "upproc": "io.flowchain.console",
+            "upport": "out",
+            "downproc": "io.flowchain.fs",
+            "downport": "in"
+        }
+    ]
 }
 ```
 
@@ -68,16 +68,16 @@ Flowchain 架構設計包含幾個特色：
 
 ```
 {
-	“author”: “jollen”,
-	“type”: “coapBroker”,
-	“connections”: [
-		{
-			“upproc”: “io.devify.fs”,
-		 	“upport”: “out”,
-		 	“downproc”: “io.devify.console”,
-		 	“downport”: “in”
-		}
-	]
+    "author": "jollen",
+    "type": "coapBroker",
+    "connections": [
+        {
+            "upproc": "io.flowchain.fs",
+            "upport": "out",
+            "downproc": "io.flowchain.console",
+            "downport": "in"
+        }
+    ]
 }
 ```
 
