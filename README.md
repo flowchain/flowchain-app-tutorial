@@ -2,7 +2,7 @@ Flowchain App 入門極簡教材
 
 # 1. Flowchain App 簡介
 
-如果要「簡單介紹」這是什麼技術，還真的不簡單。所以，不如根據這份中文教材，體驗 Flowchain 在物聯網開發上的創新。
+如果要「簡單介紹」這是什麼技術，還真的不簡單。所以，不如根據這份中文教材，體驗 Flowchain App 在物聯網開發上的創新。
 
 ## Flowchain App 起源
 
