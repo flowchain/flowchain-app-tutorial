@@ -1,4 +1,4 @@
-Flowchain 入門極簡教材
+Flowchain App 入門極簡教材
 
 # 1. Flowchain App 簡介
 
